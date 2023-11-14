@@ -1,38 +1,215 @@
-.App {
+@font-face {
+  font-family: "Open-Sans";
+  src: url("./fonts/OpenSans.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./fonts/Raleway.ttf");
+}
+
+body {
+  background-color: hsl(217, 28%, 15%);
+  max-width: 1440px;
+  margin: auto;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.nav-title {
+  height: 40px;
+}
+
+.navigation-items {
+  display: flex;
+  list-style: none;
+}
+
+.a-link {
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+  text-decoration: none;
+  color: rgb(187, 187, 187);
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.a-link:hover {
+  color: hsl(0, 0%, 100%);
+  text-decoration: underline;
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.intro-img {
+  margin: 1rem auto;
+  height: 425px;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro-section > h1 {
+  margin: 1rem auto;
+  width: 40%;
+  font-family: "Raleway";
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.intro-section > p {
+  margin: 1rem auto;
+  width: 35%;
+  line-height: 1.6;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(187, 187, 187);
+}
+
+.intro-button {
+  cursor: pointer;
+  width: 15%;
+  height: 3rem;
+  margin: 1rem auto 5rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(
+      90deg,
+      var(--c1, hsl(176, 68%, 64%)),
+      var(--c2, hsl(198, 60%, 50%)) 55%,
+      var(--c1, hsl(176, 68%, 64%))
+    )
+    var(--x, 0) / 200%;
+}
+
+.intro-desktop-bg {
+  margin: auto;
+  z-index: -1;
+  max-width: 100%;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+}
+
+.features {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 70%;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 2rem auto 2rem;
+  padding: 2rem 0rem;
 }
 
-.App-link {
-  color: #61dafb;
+.features-background {
+  width: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: hsl(218, 28%, 13%);
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.features-card {
+  margin: 2rem 0rem 2rem;
+  width: 50%;
+  text-align: center;
+}
+
+.features-image {
+  max-height: 80px;
+  width: auto;
+}
+.features-title {
+  margin: 1rem auto 1rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 700;
+}
+.features-desc {
+  width: 75%;
+  margin: 0rem auto 0rem;
+  line-height: 1.6;
+  color: rgb(187, 187, 187);
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 400px) {
+  body {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .navigation {
+    margin: 1rem 1rem;
+    width: auto;
+  }
+  .nav-title {
+    margin: 1.25rem 1rem;
+    height: 25px;
+  }
+  .a-link {
+    margin: 0em 0.25em;
+    padding: 0.5em;
+  }
+  .intro-desktop-bg {
+    display: none;
+  }
+  .intro-img {
+    margin: 1rem auto;
+    height: 15rem;
+    width: auto;
+  }
+  .intro-img {
+    margin: 1rem auto 1rem;
+    height: 15rem;
+    width: auto;
+  }
+  .intro-text {
+    width: 100%;
+  }
+  .intro-section > h1 {
+    width: 85%;
+    font-family: "Raleway";
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  .intro-section > p {
+    justify-content: center;
+    width: 80%;
+    font-family: "Raleway";
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .intro-button {
+    width: 60%;
+    font-family: "Raleway";
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .features-card {
+    width: 100%;
+  }
+  .features-background {
+    object-fit: cover;
   }
 }
