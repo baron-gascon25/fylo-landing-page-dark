@@ -29,16 +29,14 @@ const Features = () => {
   ];
 
   return (
-    <div className='features-background'>
-      <div className='features'>
-        {feats.map((feat) => (
-          <div className='features-card'>
-            <img src={feat.imgsrc} className='features-image' />
-            <h6 className='features-title'>{feat.title}</h6>
-            <p className='features-desc'>{feat.desc}</p>
-          </div>
-        ))}
-      </div>
+    <div className='features'>
+      {feats.map((feat) => (
+        <div className='features-card' key={feat.title}>
+          <img src={feat.imgsrc} className='features-image' />
+          <h6 className='features-title'>{feat.title}</h6>
+          <p className='features-desc'>{feat.desc}</p>
+        </div>
+      ))}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Navbar = () => {
       <img src={logo} alt='website-logo' className='nav-title' />
       <ul className='navigation-items'>
         {navigations.map((nav) => (
-          <li>
+          <li key={nav}>
             <a href='#' className='a-link'>
               {nav}
             </a>
