@@ -158,6 +158,7 @@ body {
 .benefits {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   width: 80%;
   margin: 1rem auto;
@@ -166,6 +167,7 @@ body {
 .benefits-title-desc-container {
   display: flex;
   flex-direction: column;
+  width: 35%;
   margin: 0rem 2rem;
 }
 
@@ -187,6 +189,7 @@ body {
 }
 .benefits-link-container {
   margin-top: 1rem;
+  width: 40%;
 }
 .benefits-a {
   text-decoration: none;
@@ -203,6 +206,65 @@ body {
 .benefits-link-container:hover {
   color: white;
   text-decoration: underline;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  padding-top: 5rem;
+  margin: 2rem auto;
+}
+
+.testimonials-quotes {
+  z-index: -1;
+  position: absolute;
+  left: 15%;
+  top: 79%;
+}
+
+.testimonials-card {
+  background-color: hsl(219, 30%, 18%);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0rem;
+  width: 27%;
+}
+
+.testimonials-main {
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgb(187, 187, 187);
+}
+
+.testimonials-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.testimonials-profile {
+  border-radius: 2rem;
+  height: 2rem;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.testimonials-user {
+  font-family: "Raleway";
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-bottom: -0.25rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.testimonials-position {
+  font-family: "Raleway";
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: rgb(187, 187, 187);
 }
 
 @media (max-width: 400px) {
@@ -277,5 +339,26 @@ body {
   .benefits-title {
     width: 100%;
     font-size: 1.2rem;
+  }
+  .benefits-link-container {
+    width: 100%;
+  }
+  .testimonials {
+    flex-direction: column;
+    width: 90%;
+    padding-top: 2rem;
+  }
+  .testimonials-card {
+    width: 70%;
+    margin: 1rem auto;
+  }
+  .testimonials-quotes {
+    top: 66.5%;
+  }
+}
+
+@media (max-width: 1235px) {
+  .intro-desktop-bg {
+    top: 95%;
   }
 }
