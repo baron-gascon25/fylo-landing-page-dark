@@ -267,6 +267,78 @@ body {
   color: rgb(187, 187, 187);
 }
 
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 3rem 0rem;
+  margin: 2rem auto;
+  text-align: center;
+  background-color: hsl(217, 28%, 15%);
+  border: none;
+  border-radius: 0.7rem;
+  box-shadow: 10px 7px 5px -1px rgba(0, 0, 0, 0.1);
+}
+
+.start-title {
+  font-family: "Raleway";
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin: 0rem;
+}
+
+.start-desc {
+  font-family: "Raleway";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 70%;
+  color: rgb(187, 187, 187);
+  margin: 1rem 0rem;
+}
+
+.input-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80%;
+  margin-top: 0.5;
+}
+
+.start-input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 1.7rem;
+  margin: 1rem;
+  height: 2rem;
+  width: 80%;
+  font-family: "Raleway";
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgb(187, 187, 187);
+}
+
+.start-button {
+  height: auto;
+  width: 30%;
+  margin: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 1.7rem;
+  font-family: "Raleway";
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  background: linear-gradient(
+      90deg,
+      var(--c1, hsl(176, 68%, 64%)),
+      var(--c2, hsl(198, 60%, 50%)) 55%,
+      var(--c1, hsl(176, 68%, 64%))
+    )
+    var(--x, 0) / 200%;
+}
+
 @media (max-width: 400px) {
   body {
     width: 100%;
