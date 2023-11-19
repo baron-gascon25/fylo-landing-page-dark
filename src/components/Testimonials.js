@@ -31,7 +31,7 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <>
-      <img src={bgquotes} alt='quotes' className='testimonials-quotes' />
+      {/* <img src={bgquotes} alt='quotes' className='testimonials-quotes' /> */}
       <div className='testimonials'>
         {testimonials.map((testimonial) => (
           <div className='testimonials-card'>

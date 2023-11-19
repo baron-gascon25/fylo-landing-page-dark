@@ -16,7 +16,9 @@ function App() {
         <Features />
         <Benefits />
         <Testimonials />
-        <GetStarted />
+        <div className='footer-bg'>
+          <GetStarted />
+        </div>
       </div>
     </>
   );
