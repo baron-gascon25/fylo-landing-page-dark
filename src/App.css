@@ -233,7 +233,7 @@ body {
 }
 
 .testimonials-main {
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
@@ -291,7 +291,7 @@ body {
 }
 
 .start-desc {
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -314,7 +314,7 @@ body {
   margin: 1rem;
   height: 2rem;
   width: 70%;
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 0.9rem;
   font-weight: 600;
   color: rgb(187, 187, 187);
@@ -345,12 +345,91 @@ body {
   background-color: hsl(216, 53%, 9%);
   position: absolute;
   width: auto;
+  height: auto;
   left: 0;
   right: 0;
   z-index: -1;
 }
 
-@media (max-width: 400px) {
+.footer-sections-1 {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 70%;
+  margin: 1rem auto 2rem;
+}
+
+.footer-sections-2 {
+  display: flex;
+  height: 20rem;
+  width: 100%;
+  margin: 1rem auto 2rem;
+}
+
+.footer-p {
+  font-family: "Open-Sans";
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(187, 187, 187);
+}
+
+.footer-h {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 15px;
+  color: rgb(187, 187, 187);
+  margin: 1rem;
+}
+
+.footer-location {
+  display: flex;
+  width: 30%;
+  margin: 0rem 0rem 3rem 0rem;
+}
+
+.fylo-icon,
+.loc-icon,
+.email-icon,
+.phone-icon {
+  margin: 1rem;
+}
+
+.footer-phone-email {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 3rem;
+}
+.footer-phone,
+.footer-email {
+  display: flex;
+  align-items: center;
+}
+
+.footer-others {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 auto;
+  align-items: start;
+  margin: 0rem 3rem;
+  height: 13.5rem;
+  width: 10%;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  padding: 0.3rem;
+  margin: 0.5rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+@media (max-width: 740px) {
   body {
     width: 100%;
   }
@@ -467,6 +546,27 @@ body {
     padding: 1.5rem;
     margin: 1rem auto;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .benefits {
+    width: 90%;
+    text-align: center;
+  }
+  .benefits-title {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .benefits-title-desc-container {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .benefits-link-container {
+    margin: 1rem auto;
+  }
+  .testimonials-card {
+    width: 80%;
   }
 }
 

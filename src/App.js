@@ -6,6 +6,7 @@ import "./App.css";
 import Benefits from "./components/Benefits";
 import Testimonials from "./components/Testimonials";
 import GetStarted from "./components/GetStarted";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Testimonials />
         <div className='footer-bg'>
           <GetStarted />
+          <Footer />
         </div>
       </div>
     </>
