@@ -33,7 +33,7 @@ const Footer = () => {
             width={13}
             height={18}
           />
-          <p className='footer-p'>
+          <p className='footer-p footer-p-loc'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua
           </p>
@@ -62,7 +62,13 @@ const Footer = () => {
         </div>
         <div className='footer-others'>
           {footer_others.map((other) => (
-            <h6 className='footer-h'>{other}</h6>
+            <h6
+              className={` ${
+                other !== "Contact Us" ? "footer-h" : "footer-contact"
+              }`}
+            >
+              {other}
+            </h6>
           ))}
         </div>
         <div className='footer-socials'>

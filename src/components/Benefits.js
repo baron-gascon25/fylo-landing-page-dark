@@ -2,7 +2,7 @@ import React from "react";
 import productive from "../images/illustration-stay-productive.png";
 import arrow from "../images/icon-arrow.svg";
 
-const BENEFITS_TITLE = "Stay productive, wherever your are";
+const BENEFITS_TITLE = "Stay productive, wherever you are";
 const BENEFITS_DESC_1 =
   "Never let location be an issue when accessing your files. Fylo has you covered for all of your storage needs.";
 const BENEFITS_DESC_2 =

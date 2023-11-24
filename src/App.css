@@ -71,7 +71,7 @@ body {
   margin: 1rem auto;
   width: 35%;
   line-height: 1.6;
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 16px;
   font-weight: 400;
   color: rgb(187, 187, 187);
@@ -90,8 +90,17 @@ body {
   color: hsl(0, 0%, 100%);
   background: linear-gradient(
       90deg,
+      var(--c1, hsl(198, 60%, 50%)),
+      var(--c1, hsl(176, 68%, 64%)) 55%,
+      var(--c1, hsl(198, 60%, 50%))
+    )
+    var(--x, 0) / 200%;
+}
+.intro-button:hover {
+  background: linear-gradient(
+      90deg,
       var(--c1, hsl(176, 68%, 64%)),
-      var(--c2, hsl(198, 60%, 50%)) 55%,
+      var(--c2, hsl(176, 68%, 64%)) 76%,
       var(--c1, hsl(176, 68%, 64%))
     )
     var(--x, 0) / 200%;
@@ -105,6 +114,10 @@ body {
   top: 70%;
   left: 0;
   right: 0;
+}
+
+.intro-mobile-bg {
+  display: none;
 }
 
 .features {
@@ -150,7 +163,7 @@ body {
   margin: 0rem auto 0rem;
   line-height: 1.6;
   color: rgb(187, 187, 187);
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 14px;
   font-weight: 400;
 }
@@ -181,7 +194,7 @@ body {
 }
 .benefits-desc {
   color: rgb(187, 187, 187);
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
@@ -194,7 +207,7 @@ body {
 .benefits-a {
   text-decoration: none;
   color: rgb(187, 187, 187);
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 15px;
   font-weight: 400;
 }
@@ -261,7 +274,7 @@ body {
 }
 
 .testimonials-position {
-  font-family: "Raleway";
+  font-family: "Open-Sans";
   font-size: 0.65rem;
   font-weight: 400;
   color: rgb(187, 187, 187);
@@ -334,8 +347,17 @@ body {
   color: hsl(0, 0%, 100%);
   background: linear-gradient(
       90deg,
-      var(--c1, hsl(176, 68%, 64%)),
+      var(--c2, hsl(198, 60%, 50%)),
       var(--c2, hsl(198, 60%, 50%)) 55%,
+      var(--c2, hsl(198, 60%, 50%))
+    )
+    var(--x, 0) / 200%;
+}
+.start-button:hover {
+  background: linear-gradient(
+      90deg,
+      var(--c1, hsl(176, 68%, 64%)),
+      var(--c2, hsl(198, 60%, 50%)) 76%,
       var(--c1, hsl(176, 68%, 64%))
     )
     var(--x, 0) / 200%;
@@ -370,17 +392,23 @@ body {
   font-family: "Open-Sans";
   font-weight: 400;
   font-size: 14px;
-  color: rgb(187, 187, 187);
+  color: hsl(0, 0%, 100%);
 }
 
 .footer-h {
   font-family: "Raleway";
   font-weight: 400;
   font-size: 15px;
-  color: rgb(187, 187, 187);
+  color: hsl(0, 0%, 100%);
   margin: 1rem;
 }
-
+.footer-contact {
+  font-family: "Raleway";
+  font-weight: 400;
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  margin: 1rem;
+}
 .footer-location {
   display: flex;
   width: 30%;
@@ -410,10 +438,13 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   flex: 1 auto;
-  align-items: start;
-  margin: 0rem 3rem;
+  margin: 0rem 1.5rem;
   height: 13.5rem;
   width: 10%;
+}
+
+.footer-socials {
+  margin: 0rem 2rem 0rem 0rem;
 }
 
 .fa-facebook,
@@ -429,7 +460,45 @@ body {
   text-align: center;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 1370px) {
+  .footer-others,
+  .footer-socials,
+  .footer-phone-email {
+    margin: 0rem;
+  }
+  .footer-others {
+    width: 0%;
+  }
+}
+
+@media (max-width: 1320px) {
+  .benefits {
+    width: 90%;
+    text-align: center;
+  }
+  .benefits-title {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .benefits-title-desc-container {
+    width: 50%;
+    margin: 1rem auto;
+  }
+  .benefits-link-container {
+    margin: 1rem auto;
+  }
+  .testimonials-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1132px) {
+  .intro-desktop-bg {
+    top: 80%;
+  }
+}
+
+@media (max-width: 1040px) {
   body {
     width: 100%;
   }
@@ -447,6 +516,16 @@ body {
   }
   .intro-desktop-bg {
     display: none;
+  }
+  .intro-mobile-bg {
+    display: block;
+    margin: auto;
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
   }
   .intro-img {
     margin: 1rem auto;
@@ -488,7 +567,9 @@ body {
     width: 80%;
   }
   .benefits {
-    width: 100%;
+    width: 85%;
+    text-align: left;
+    margin: 0.5rem auto;
   }
   .benefits-img {
     height: 225px;
@@ -507,7 +588,7 @@ body {
   }
   .testimonials {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding-top: 2rem;
   }
   .testimonials-card {
@@ -519,6 +600,7 @@ body {
   }
   .start {
     width: 90%;
+    margin-bottom: 2rem;
   }
   .start-title {
     width: 90%;
@@ -547,31 +629,105 @@ body {
     margin: 1rem auto;
     font-size: 1rem;
   }
-}
-
-@media (max-width: 1100px) {
-  .benefits {
+  .footer-bg {
+    height: 37.5%;
+  }
+  .fylo-icon {
+    height: 10rem;
+    width: 10rem;
+  }
+  .footer-sections-1 {
     width: 90%;
-    text-align: center;
+    margin: 0rem auto;
   }
-  .benefits-title {
-    margin-top: 2rem;
+  .footer-sections-2 {
+    height: auto;
+    width: auto;
+    flex-direction: column;
+  }
+  .footer-location {
     width: 100%;
+    margin: 0.5rem 0rem 0rem;
   }
-  .benefits-title-desc-container {
-    width: 50%;
-    margin: 1rem auto;
+  .footer-phone-email {
+    width: 100%;
+    margin: 0rem 0rem 2rem;
   }
-  .benefits-link-container {
-    margin: 1rem auto;
+  .footer-others {
+    width: 100%;
+    margin: 0.5rem 0rem;
+    height: auto;
   }
-  .testimonials-card {
-    width: 80%;
+  .footer-contact {
+    width: 100%;
+    margin: 2rem 1rem 0.5rem;
+  }
+  .footer-socials {
+    margin: 3rem auto;
+    flex-wrap: wrap;
+  }
+  .footer-h {
+    width: 100%;
+    margin: 0.5rem 1rem;
+  }
+  .footer-p {
+    margin: 0.25rem 0.5rem;
+  }
+  .footer-p-loc {
+    margin: 0.5rem 1rem;
+  }
+  .fa-facebook,
+  .fa-twitter,
+  .fa-instagram {
+    font-size: 14px;
+    height: 14px;
+    width: 15px;
+    padding: 0.4rem;
   }
 }
 
-@media (max-width: 1235px) {
-  .intro-desktop-bg {
-    top: 95%;
+@media (max-width: 1020px) {
+  .intro-mobile-bg {
+    top: 40%;
+  }
+}
+
+@media (max-width: 860px) {
+  .intro-mobile-bg {
+    top: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .mobile-layout {
+    background-color: hsl(218, 28%, 13%);
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-mobile-bg {
+    top: 55%;
+  }
+  .mobile-layout {
+    background-color: hsl(218, 28%, 13%);
+  }
+}
+
+@media (max-width: 455px) {
+  .intro-mobile-bg {
+    top: 55%;
+  }
+  .mobile-layout {
+    background-color: hsl(218, 28%, 13%);
+  }
+}
+
+@media (max-width: 400px) {
+  .intro-mobile-bg {
+    top: 55%;
+  }
+  .mobile-layout {
+    background-color: hsl(218, 28%, 13%);
+    margin: -0.5rem 0rem 0rem;
   }
 }
