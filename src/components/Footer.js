@@ -62,19 +62,27 @@ const Footer = () => {
         </div>
         <div className='footer-others'>
           {footer_others.map((other) => (
-            <h6
-              className={` ${
-                other !== "Contact Us" ? "footer-h" : "footer-contact"
-              }`}
-            >
-              {other}
-            </h6>
+            <a href='#' className='footer-link'>
+              <h6
+                className={` ${
+                  other !== "Contact Us" ? "footer-h" : "footer-contact"
+                }`}
+              >
+                {other}
+              </h6>
+            </a>
           ))}
         </div>
         <div className='footer-socials'>
-          <i className='fa fa-facebook' aria-hidden='true'></i>
-          <i className='fa fa-twitter' aria-hidden='true'></i>
-          <i className='fa fa-instagram' aria-hidden='true'></i>
+          <a href='#'>
+            <i className='fa fa-facebook' aria-hidden='true'></i>
+          </a>
+          <a href='#'>
+            <i className='fa fa-twitter' aria-hidden='true'></i>
+          </a>
+          <a href='#'>
+            <i className='fa fa-instagram' aria-hidden='true'></i>
+          </a>
         </div>
       </div>
     </div>
